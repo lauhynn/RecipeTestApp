@@ -8,8 +8,24 @@ const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: 'home',
+    redirectTo: 'welcome-page',
     pathMatch: 'full'
+  },
+  {
+    path: 'welcome-page',
+    loadChildren: () => import('./welcome-page/welcome-page.module').then( m => m.WelcomePagePageModule)
+  },
+  {
+    path: 'recipes-page',
+    loadChildren: () => import('./recipes-page/recipes-page.module').then( m => m.RecipesPagePageModule)
+  },
+  {
+    path: 'my-recipes-page',
+    loadChildren: () => import('./my-recipes-page/my-recipes-page.module').then( m => m.MyRecipesPagePageModule)
+  },
+  {
+    path: 'recipe-details-page',
+    loadChildren: () => import('./recipe-details-page/recipe-details-page.module').then( m => m.RecipeDetailsPagePageModule)
   },
 ];
 
