@@ -24,7 +24,7 @@ const routes: Routes = [
     loadChildren: () => import('./my-recipes-page/my-recipes-page.module').then( m => m.MyRecipesPagePageModule)
   },
   {
-    path: 'recipe-details-page',
+    path: 'recipes-page/:id',
     loadChildren: () => import('./recipe-details-page/recipe-details-page.module').then( m => m.RecipeDetailsPagePageModule)
   },
 ];
